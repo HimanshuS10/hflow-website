@@ -1,0 +1,1415 @@
+@font-face {
+    src: url(fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+    font-family: mont;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #1B1B1B;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/*Mobile*/
+@media (max-width: 500px) {
+    .nav_bar {
+        height: 10vh;
+        width: auto;
+        background-color: #0075FF;
+        box-shadow: 5px 5px 4px rgb(0, 0, 0);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    li,
+    a {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        font-size: 16px;
+        color: #edf0f1;
+        text-decoration: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 30px 4%;
+    }
+
+    .header-learnmore {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 30px 2%;
+    }
+
+    .logo {
+        display: none;
+        margin-right: auto;
+        cursor: pointer;
+        height: 120px;
+        width: 170px;
+        margin-top: -1.4em;
+        cursor: pointer;
+        clip-path: polygon(0 20%, 100% 20%, 100% 60%, 0 60%);
+    }
+
+    .nav_links {
+        list-style: none;
+        padding-bottom: 4em;
+    }
+
+    .nav_links li {
+        display: inline-block;
+        padding: 0px 24px;
+    }
+
+    .nav_links li a {
+        transition: all 0.3s ease 0s;
+    }
+
+    .nav_links li a:hover {
+        color: rgb(0, 0, 0);
+    }
+
+    .hero {
+        height: 75vh;
+        width: 100%;
+        color: white;
+    }
+
+    .hero h1 {
+        font-size: 25px;
+        text-align: center;
+        padding-top: 2em;
+        font-weight: 900;
+        margin-left: 1em;
+        margin-right: 1em;
+        text-shadow: 3px 3px 3px rgb(40, 40, 41);
+    }
+
+    .hero p {
+        font-size: 9px;
+        text-align: center;
+        margin-top: 1em;
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    .video {
+        text-align: center;
+    }
+
+    iframe {
+        width: 400px;
+        height: 280px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px black;
+    }
+
+    .bookcall {
+        display: flex;
+        margin: auto;
+        height: 60px;
+        width: 300px;
+        border-radius: 10px;
+        background-color: #0075FF;
+        transition: all 0.3s ease 0s;
+        color: #ffffff;
+        border: none;
+        margin-top: 2em;
+        box-shadow: 5px 5px 5px black;
+    }
+
+    .video img {
+        height: 300px;
+        width: 300px;
+        margin-top: 2em;
+        margin-bottom: -4em;
+    }
+
+    .bookcall h1 {
+        font-size: 30px;
+        margin: auto;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .CTA-button button:hover {
+        background-color: rgb(19, 75, 179);
+        cursor: pointer;
+    }
+
+    .image {
+        margin: auto;
+        text-align: center;
+    }
+
+    .image img {
+        margin-top: 1em;
+        height: 400px;
+        width: 400px;
+    }
+
+    .about {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .box {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+        background-color: rgb(65, 65, 65);
+        height: 800px;
+        width: 90%;
+        border-radius: 50px;
+        box-shadow: 3px 3px 10px rgb(0, 89, 255);
+        text-align: center;
+    }
+
+    .box h1 {
+        font: 15px;
+        margin-top: 0.5em;
+        margin-left: 0.2em;
+        color: white;
+    }
+
+    .box p {
+        font: 12px;
+        padding-top: 0.5em;
+        padding-left: 0.5em;
+        color: #ffffff;
+    }
+
+    .text {
+        text-align: left;
+        font-size: 18px;
+        padding-top: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+        color: aliceblue;
+    }
+
+    .text h1 {
+        font-size: 25px;
+        font-weight: 700;
+    }
+
+    .text p {
+        font-size: 14px;
+    }
+
+    .about_image img {
+        border-radius: 20px;
+        margin-top: 2em;
+        height: 339px;
+        width: 339px;
+    }
+
+    .service {
+        height: 120vh;
+        width: 100%;
+    }
+
+    .service_title h1 {
+        font-weight: 700;
+
+        margin-top: 15em;
+        text-align: center;
+        color: #ffffff;
+        font-size: 50px;
+    }
+
+    .container_service {
+        margin: auto;
+        height: auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .container_service h1 {
+        font-size: 25px;
+        color: white;
+    }
+
+    .container img {
+        margin: auto;
+        height: 200px;
+        width: 200px;
+        opacity: 100%;
+    }
+
+    .container {
+        margin: auto;
+        margin-top: 2em;
+        display: inline-block;
+        height: 250px;
+        width: 300px;
+        box-shadow: 5px 5px 5px black;
+        background: linear-gradient(to top right, #001AFF, #4476da);
+    }
+
+    .container h1 {
+        font-weight: 900;
+        margin-bottom: 0.5em;
+    }
+
+    .learnmore {
+        margin: auto;
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    .learnmore button {
+        height: 50px;
+        width: 300px;
+        border-radius: 50px;
+        border: 2px solid #0075FF;
+        background-color: #1B1B1B;
+        font-size: 30px;
+        color: #0075FF;
+        transition: all 0.8s ease 0s;
+    }
+
+    .learnmore button:hover {
+        cursor: pointer;
+        color: #ffffff;
+        background-color: #0075FF;
+    }
+
+    .process {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .process_title h1 {
+        margin-top: -2.5em;
+        text-align: center;
+        color: #ffffff;
+        font-size: 50px;
+    }
+
+    .container:hover {
+        background: linear-gradient(to top right, #3145fa, #4a7ada);
+    }
+
+    .book_call {
+        color: #ffffff;
+        text-align: center;
+        font-size: 30px;
+        margin-top: 7em;
+        margin-bottom: -3em;
+
+    }
+
+    .book_call h1 {
+        font-size: 35px;
+        margin-top: 25em;
+        padding-right: 10px;
+        padding-left: 10px;
+        font-weight: 700;
+    }
+
+    .calendly {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .calendly-inline-widget {
+        margin: auto;
+        height: 900px;
+        width: 100%;
+        max-width: 100vh;
+        align-items: center;
+        align-self: center;
+        margin-left: 1.0em;
+        margin-top: 9em;
+    }
+
+    footer {
+        margin-top: -35em;
+        background: #424242;
+        padding-top: 50px;
+    }
+
+    h3 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: white;
+    }
+
+    .footer-content {
+        margin-top: 1em;
+    }
+
+    .footer-content p {
+        margin: auto;
+        text-align: center;
+        padding: 7px;
+        color: white;
+    }
+
+    .footer-content ul {
+        text-align: center;
+    }
+
+    .list {
+        padding: 0;
+    }
+
+    .list li {
+        width: auto;
+        text-align: center;
+        list-style-type: none;
+        padding: 7px;
+        position: relative;
+        text-decoration: none;
+        color: white;
+    }
+
+    .list li::before {
+        content: '';
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height: 2px;
+        background: #fdfdfd;
+        transition-duration: .5s;
+    }
+
+    .list li:hover::before {
+        width: 70px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover {
+        color: rgb(64, 131, 255);
+    }
+
+    .social-icons i:hover {
+        color: rgb(64, 131, 255);
+    }
+
+    .bottom-bar {
+        background: rgb(0, 89, 255);
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 50px;
+    }
+
+    .bottom-bar p {
+        color: #ffffff;
+        margin: 0;
+        font-size: 16px;
+        padding: 7px;
+    }
+
+    .link :hover {
+        color: rgb(255, 255, 255);
+    }
+
+    .title-learnmore h1 {
+        text-align: center;
+        margin-top: 0.5em;
+        color: #ffffff;
+        font-size: 50px;
+        margin-bottom: -1em;
+    }
+
+
+
+
+    .box {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 2em;
+        background-color: rgb(65, 65, 65);
+        height: 800px;
+        width: 90%;
+        border-radius: 50px;
+        box-shadow: 3px 3px 10px rgb(0, 89, 255);
+        text-align: center;
+    }
+
+    .box-learnmore h1 {
+        font: 15px;
+        margin-top: 0.5em;
+        margin-left: 0.2em;
+        color: white;
+    }
+
+    .box-learnmore {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 3.5em;
+        background-color: rgb(65, 65, 65);
+        height: 800px;
+        width: 90%;
+        border-radius: 50px;
+        box-shadow: 3px 3px 10px rgb(0, 89, 255);
+        text-align: center;
+    }
+
+    .text h1 {
+        font-size: 30px;
+    }
+
+    .text p {
+        font-size: 15px;
+    }
+
+    .learnmore_image img {
+        border-radius: 20px;
+        margin-top: 2em;
+        margin-right: 2em;
+        margin-left: 2em;
+        height: 339px;
+        width: 339px;
+    }
+
+    .book-call-learnmore {
+        height: 100vh;
+        width: 100%;
+        margin-bottom: 4em;
+    }
+
+
+
+    .book-call-title h1 {
+        margin-top: 2em;
+        margin-bottom: -4.5em;
+        color: white;
+        text-align: center;
+        font-size: 30px;
+    }
+
+}
+
+/*The screen is for laptop screen*/
+@media only screen and (min-width: 900px) and (max-width: 1280px) {
+    .nav_bar {
+        height: 15vh;
+        width: 100%;
+        background-color: #0075FF;
+        box-shadow: 5px 5px 4px rgb(0, 0, 0);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    li,
+    a {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        font-size: 16px;
+        color: #edf0f1;
+        text-decoration: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 30px 4%;
+    }
+
+    .logo {
+        margin-right: auto;
+        cursor: pointer;
+        height: 120px;
+        width: 170px;
+        margin-top: -1.4em;
+        cursor: pointer;
+        clip-path: polygon(0 20%, 100% 20%, 100% 60%, 0 60%);
+    }
+
+    .nav_links {
+        list-style: none;
+        padding-bottom: 4em;
+    }
+
+    .nav_links li {
+        display: inline-block;
+        padding: 0px 20px;
+    }
+
+    .nav_links li a {
+        transition: all 0.3s ease 0s;
+    }
+
+    .nav_links li a:hover {
+        color: rgb(0, 0, 0);
+    }
+
+    .hero {
+        height: 75vh;
+        width: 100%;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+        text-align: center;
+        padding-top: 2em;
+        font-weight: 900;
+        margin-left: 3em;
+        margin-right: 3em;
+        text-shadow: 3px 3px 3px rgb(40, 40, 41);
+    }
+
+    .hero p {
+        font-size: 22px;
+        text-align: center;
+        margin-top: 1em;
+        margin-left: 7em;
+        margin-right: 7em;
+    }
+
+    .video {
+        text-align: center;
+        margin-top: -7em;
+    }
+
+    iframe {
+        width: 900px;
+        height: 480px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px black;
+    }
+
+    .bookcall {
+        display: flex;
+        margin: auto;
+        height: 60px;
+        width: 900px;
+        border-radius: 10px;
+        background-color: #0075FF;
+        transition: all 0.3s ease 0s;
+        color: #ffffff;
+        border: none;
+        margin-top: 2em;
+        box-shadow: 5px 5px 5px black;
+    }
+
+    .video img {
+        margin-top: 2em;
+        margin-bottom: -4em;
+    }
+
+    .bookcall h1 {
+        font-size: 30px;
+        margin: auto;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .CTA-button button:hover {
+        background-color: rgb(19, 75, 179);
+        cursor: pointer;
+    }
+
+    .image {
+        margin: auto;
+        text-align: center;
+    }
+
+    .image img {
+        margin-top: 2em;
+    }
+
+    .about {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .box {
+        margin: auto;
+        display: flex;
+        margin-top: 2em;
+        background-color: rgb(65, 65, 65);
+        height: 400px;
+        width: 1162px;
+        border-radius: 50px;
+        box-shadow: 3px 3px 10px rgb(0, 89, 255);
+        text-align: center;
+    }
+
+    .box h1 {
+        font: 30px;
+        margin-top: 0.5em;
+        margin-left: 0.2em;
+        color: white;
+    }
+
+    .box p {
+        font: 12px;
+        padding-top: 0.5em;
+        padding-left: 0.5em;
+        color: #ffffff;
+    }
+
+    .text {
+        text-align: left;
+        font-size: 18px;
+        padding-top: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+        color: aliceblue;
+    }
+
+    .text h1 {
+        font-weight: 700;
+    }
+
+    .text p {
+        font-size: 20px;
+    }
+
+    .about_image img {
+        border-radius: 20px;
+        margin-top: 2em;
+        margin-right: 2em;
+        height: 339px;
+        width: 339px;
+    }
+
+    .service {
+        height: 120vh;
+        width: 100%;
+    }
+
+    .service_title h1 {
+        padding-top: 6em;
+        text-align: center;
+        color: #ffffff;
+        font-size: 50px;
+    }
+
+    .container_service {
+        margin: auto;
+        height: auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .container_service h1 {
+        font-size: 25px;
+        color: white;
+    }
+
+    .container img {
+        height: 200px;
+        width: 200px;
+        opacity: 80%;
+    }
+
+    .container {
+        display: inline-block;
+        height: 250px;
+        width: 300px;
+        box-shadow: 5px 5px 5px black;
+        background: linear-gradient(to top right, #001AFF, #4476da);
+        margin: 1em;
+    }
+
+    .container h1 {
+        font-weight: 900;
+    }
+
+    .learnmore {
+        margin: auto;
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    .learnmore button {
+        height: 50px;
+        width: 300px;
+        border-radius: 50px;
+        border: 2px solid #0075FF;
+        background-color: #1B1B1B;
+        font-size: 30px;
+        color: #0075FF;
+        transition: all 0.8s ease 0s;
+    }
+
+    .learnmore button:hover {
+        cursor: pointer;
+        color: #ffffff;
+        background-color: #0075FF;
+    }
+
+    .process {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .process_title h1 {
+        padding-top: 1em;
+        text-align: center;
+        color: #ffffff;
+        font-size: 50px;
+    }
+
+    .container:hover {
+        background: linear-gradient(to top right, #3145fa, #4a7ada);
+    }
+
+    .book_call {
+        color: #ffffff;
+        text-align: center;
+        font-size: 30px;
+        margin-top: 7em;
+        margin-bottom: -3em;
+    }
+
+    .book_call h1 {
+        font-weight: 700;
+    }
+
+    .calendly {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .calendly-inline-widget {
+        margin: auto;
+        height: 700px;
+        width: 100%;
+        max-width: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    footer {
+        background: #424242;
+        padding-top: 50px;
+        margin-top: 4em;
+    }
+
+    .container_footer {
+        width: 1140px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-content {
+        width: 33%;
+    }
+
+    h3 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: white;
+    }
+
+    .footer-content p {
+        width: 190px;
+        text-align: center;
+        margin: auto;
+        padding: 7px;
+        color: white;
+    }
+
+    .footer-content ul {
+        text-align: left;
+    }
+
+    .list {
+        padding: 0;
+    }
+
+    .list li {
+        width: auto;
+        text-align: center;
+        list-style-type: none;
+        padding: 7px;
+        position: relative;
+        text-decoration: none;
+        color: white;
+    }
+
+    .list li::before {
+        content: '';
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height: 2px;
+        background: #fdfdfd;
+        transition-duration: .5s;
+    }
+
+    .list li:hover::before {
+        width: 70px;
+    }
+
+    .social-icons {
+        text-align: center;
+        padding: 0;
+    }
+
+    .social-icons li {
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .social-icons i {
+        color: white;
+        font-size: 25px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover {
+        color: rgb(64, 131, 255);
+    }
+
+    .social-icons i:hover {
+        color: rgb(64, 131, 255);
+    }
+
+    .bottom-bar {
+        background: rgb(0, 89, 255);
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 50px;
+    }
+
+    .bottom-bar p {
+        color: #ffffff;
+        margin: 0;
+        font-size: 16px;
+        padding: 7px;
+    }
+
+    .link :hover {
+        color: rgb(255, 255, 255);
+    }
+
+    .title-learnmore h1 {
+        text-align: center;
+        margin-top: 0.5em;
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 50px;
+        margin-bottom: -1em;
+    }
+
+    .box-learnmore {
+        margin: auto;
+        display: flex;
+        margin-top: 4em;
+        background-color: rgb(65, 65, 65);
+        height: 400px;
+        width: 1162px;
+        border-radius: 50px;
+        box-shadow: 3px 3px 10px rgb(0, 89, 255);
+        text-align: center;
+    }
+
+    .learnmore_image img {
+        border-radius: 20px;
+        margin-top: 2em;
+        margin-right: 2em;
+        margin-left: 2em;
+        height: 339px;
+        width: 339px;
+    }
+
+    .book-call-learnmore {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .book-call-title {
+        margin-top: 2em;
+        margin-bottom: -3em;
+        color: white;
+        text-align: center;
+        font-size: 30px;
+    }
+}
+
+/*The screen is for desktop screen*/
+@media only screen and (min-width: 1281px) {
+
+    .nav_bar {
+        height: 10vh;
+        width: 100%;
+        background-color: #0075FF;
+        box-shadow: 5px 5px 4px rgb(0, 0, 0);
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
+    li,
+    a {
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 100;
+        font-size: 16px;
+        color: #edf0f1;
+        text-decoration: none;
+    }
+
+    header {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 30px 4%;
+    }
+
+    .logo {
+        margin-right: auto;
+        cursor: pointer;
+        height: 120px;
+        width: 170px;
+        margin-top: -1.4em;
+        cursor: pointer;
+        clip-path: polygon(0 20%, 100% 20%, 100% 60%, 0 60%);
+    }
+
+    .nav_links {
+        list-style: none;
+        padding-bottom: 4em;
+    }
+
+    .nav_links li {
+        display: inline-block;
+        padding: 0px 20px;
+    }
+
+    .nav_links li a {
+        transition: all 0.3s ease 0s;
+    }
+
+    .nav_links li a:hover {
+        color: rgb(0, 0, 0);
+    }
+
+    .hero {
+        height: 75vh;
+        width: 100%;
+        color: white;
+        font-family: "Montserrat", sans-serif;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+        text-align: center;
+        padding-top: 2em;
+        font-weight: 900;
+        margin-left: 9em;
+        margin-right: 9em;
+        text-shadow: 3px 3px 3px rgb(40, 40, 41);
+    }
+
+    .hero p {
+        font-size: 22px;
+        text-align: center;
+        margin-top: 1em;
+        margin-left: 15em;
+        margin-right: 15em;
+    }
+
+    .video {
+        text-align: center;
+        margin-top: -23em;
+    }
+
+    iframe {
+        width: 900px;
+        height: 480px;
+        border-radius: 10px;
+        box-shadow: 5px 5px 5px black;
+    }
+
+    .bookcall {
+        display: flex;
+        margin: auto;
+        height: 60px;
+        width: 900px;
+        border-radius: 10px;
+        background-color: #0075FF;
+        transition: all 0.3s ease 0s;
+        color: #ffffff;
+        border: none;
+        margin-top: 2em;
+        box-shadow: 5px 5px 5px black;
+    }
+
+    .video img {
+        margin-top: 2em;
+        margin-bottom: -4em;
+    }
+
+    .bookcall h1 {
+        font-size: 30px;
+        margin: auto;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    .CTA-button button:hover {
+        background-color: rgb(19, 75, 179);
+        cursor: pointer;
+    }
+
+    .image {
+        margin: auto;
+        margin-top: 2em;
+        text-align: center;
+    }
+
+    .about {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .box {
+        margin: auto;
+        display: flex;
+        margin-top: 2em;
+        background-color: rgb(65, 65, 65);
+        height: 400px;
+        width: 1162px;
+        border-radius: 50px;
+        box-shadow: 3px 3px 10px rgb(0, 89, 255);
+        text-align: center;
+    }
+
+    .box h1 {
+        font: 30px;
+        margin-top: 0.5em;
+        margin-left: 0.2em;
+        color: white;
+    }
+
+    .box p {
+        font: 12px;
+        padding-top: 0.5em;
+        padding-left: 0.5em;
+        color: #ffffff;
+    }
+
+    .text {
+        text-align: left;
+        font-size: 18px;
+        padding-top: 1em;
+        padding-left: 1em;
+        padding-right: 1em;
+        color: aliceblue;
+    }
+
+    .text h1 {
+        font-weight: 700;
+    }
+
+    .text p {
+        font-size: 20px;
+    }
+
+    .about_image img {
+        border-radius: 20px;
+        margin-top: 2em;
+        margin-right: 2em;
+        height: 339px;
+        width: 339px;
+    }
+
+    .service {
+        height: 120vh;
+        width: 100%;
+        margin-top: -23em;
+    }
+
+    .service_title h1 {
+        padding-top: 6em;
+        text-align: center;
+        color: #ffffff;
+        font-size: 50px;
+    }
+
+    .container_service {
+        margin: auto;
+        height: auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .container_service h1 {
+        font-size: 25px;
+        color: white;
+    }
+
+    .container img {
+        height: 200px;
+        width: 200px;
+        opacity: 80%;
+    }
+
+    .container {
+        display: inline-block;
+        height: 250px;
+        width: 300px;
+        box-shadow: 5px 5px 5px black;
+        background: linear-gradient(to top right, #001AFF, #4476da);
+        margin: 1em;
+    }
+
+    .container h1 {
+        font-weight: 900;
+    }
+
+    .learnmore {
+        margin: auto;
+        text-align: center;
+        margin-top: 1em;
+    }
+
+    .learnmore button {
+        height: 50px;
+        width: 300px;
+        border-radius: 50px;
+        border: 2px solid #0075FF;
+        background-color: #1B1B1B;
+        font-size: 30px;
+        color: #0075FF;
+        transition: all 0.8s ease 0s;
+    }
+
+    .learnmore button:hover {
+        cursor: pointer;
+        color: #ffffff;
+        background-color: #0075FF;
+    }
+
+    .process {
+        height: 100vh;
+        width: 100%;
+        margin-top: -27em;
+        margin-bottom: -27em;
+    }
+
+    .process_title h1 {
+        padding-top: 1em;
+        text-align: center;
+        color: #ffffff;
+        font-size: 50px;
+    }
+
+    .container:hover {
+        background: linear-gradient(to top right, #3145fa, #4a7ada);
+    }
+
+    .book_call {
+        color: #ffffff;
+        text-align: center;
+        font-size: 30px;
+        margin-top: 7em;
+        margin-bottom: -3em;
+    }
+
+    .book_call h1 {
+        font-weight: 700;
+    }
+
+    .calendly {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .calendly-inline-widget {
+        margin: auto;
+        height: 700px;
+        width: 100%;
+        max-width: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    footer {
+        background: #424242;
+        padding-top: 50px;
+        margin-top: -15em;
+    }
+
+    .container_footer {
+        width: 1140px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    .footer-content {
+        width: 33%;
+    }
+
+    h3 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: white;
+    }
+
+    .footer-content p {
+        width: 190px;
+        text-align: center;
+        margin: auto;
+        padding: 7px;
+        color: white;
+    }
+
+    .footer-content ul {
+        text-align: left;
+    }
+
+    .list {
+        padding: 0;
+    }
+
+    .list li {
+        width: auto;
+        text-align: center;
+        list-style-type: none;
+        padding: 7px;
+        position: relative;
+        text-decoration: none;
+        color: white;
+    }
+
+    .list li::before {
+        content: '';
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height: 2px;
+        background: #fdfdfd;
+        transition-duration: .5s;
+    }
+
+    .list li:hover::before {
+        width: 70px;
+    }
+
+    .social-icons {
+        text-align: center;
+        padding: 0;
+    }
+
+    .social-icons li {
+        display: inline-block;
+        text-align: center;
+        padding: 5px;
+    }
+
+    .social-icons i {
+        color: white;
+        font-size: 25px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover {
+        color: rgb(64, 131, 255);
+    }
+
+    .social-icons i:hover {
+        color: rgb(64, 131, 255);
+    }
+
+    .bottom-bar {
+        background: rgb(0, 89, 255);
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 50px;
+    }
+
+    .bottom-bar p {
+        color: #ffffff;
+        margin: 0;
+        font-size: 16px;
+        padding: 7px;
+    }
+
+    .link :hover {
+        color: rgb(255, 255, 255);
+    }
+
+    .title-learnmore h1 {
+        text-align: center;
+        margin-top: 0.5em;
+        color: #ffffff;
+        font-size: 50px;
+        font-weight: 700;
+        margin-bottom: -1em;
+    }
+
+    .box-learnmore {
+        margin: auto;
+        display: flex;
+        margin-top: 4em;
+        background-color: rgb(65, 65, 65);
+        height: 400px;
+        width: 1162px;
+        border-radius: 50px;
+        box-shadow: 3px 3px 10px rgb(0, 89, 255);
+        text-align: center;
+    }
+
+    .learnmore_image img {
+        border-radius: 20px;
+        margin-top: 2em;
+        margin-right: 2em;
+        margin-left: 2em;
+        height: 339px;
+        width: 339px;
+    }
+
+    .book-call-learnmore {
+        height: 100vh;
+        width: 100%;
+    }
+
+    .book-call-title {
+        margin-top: 2em;
+        margin-bottom: -3em;
+        color: white;
+        text-align: center;
+        font-size: 30px;
+    }
+}
