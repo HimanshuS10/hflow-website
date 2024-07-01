@@ -7,184 +7,295 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Lato", sans-serif;
+    font-family: "DM Sans", sans-serif;
     font-weight: 400;
+    font-style: normal;
+}
+
+.dm-sans-DM-Sans {
+    font-family: "DM Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1000;
     font-style: normal;
 }
 
 body {
     background-color: #1B1B1B;
+    min-height: 100vh;
 }
 
 html {
     scroll-behavior: smooth;
 }
 
-/*Mobile*/
-@media (max-width: 500px) {
-    .nav_bar {
-        height: 10vh;
-        width: auto;
+
+@media only screen and (min-width:1205px) {
+    .header {
+        position: fixed;
         background-color: #0075FF;
-        box-shadow: 5px 5px 4px rgb(0, 0, 0);
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-    }
-
-    li,
-    a {
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 100;
-        font-size: 16px;
-        color: #edf0f1;
-        text-decoration: none;
-    }
-
-    header {
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1.3rem 10%;
         display: flex;
-        justify-content: flex-end;
+        justify-content: space-between;
         align-items: center;
-        padding: 30px 4%;
+        z-index: 100;
     }
 
-    .header-learnmore {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 30px 2%;
+    .header a {
+        font-family: "DM Sans", sans-serif;
+        font-weight: 1000;
+    }
+
+    .header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
     }
 
     .logo {
-        display: none;
-        margin-right: auto;
-        cursor: pointer;
-        height: 120px;
-        width: 170px;
-        margin-top: -1.4em;
-        cursor: pointer;
-        clip-path: polygon(0 20%, 100% 20%, 100% 60%, 0 60%);
+        font-size: 2em;
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
     }
 
-    .nav_links {
-        list-style: none;
-        padding-bottom: 4em;
+    .navbar a {
+        font-size: 1.15rem;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        margin-left: 2.5rem;
     }
 
-    .nav_links li {
-        display: inline-block;
-        padding: 0px 24px;
-    }
-
-    .nav_links li a {
-        transition: all 0.3s ease 0s;
-    }
-
-    .nav_links li a:hover {
+    header a:hover {
         color: rgb(0, 0, 0);
+        cursor: pointer;
+    }
+
+    #check {
+        display: none;
+    }
+
+    .icons {
+        position: absolute;
+        right: 5%;
+        font-size: 2.8rem;
+        color: white;
+        cursor: pointer;
+        display: none;
     }
 
     .hero {
-        height: 75vh;
-        width: 100%;
-        color: white;
+        margin-top: 10em;
+        min-width: 300px;
+        color: rgb(209, 209, 209);
+        background-color: #1B1B1B;
     }
 
     .hero h1 {
-        font-size: 25px;
         text-align: center;
-        padding-top: 2em;
-        font-weight: 900;
-        margin-left: 1em;
-        margin-right: 1em;
-        text-shadow: 3px 3px 3px rgb(40, 40, 41);
+        font-family: "DM Sans", sans-serif;
+        font-weight: 1000;
+        font-size: clamp(16px, 7vw, 100px);
+        padding-left: 0.3em;
+        padding-right: 0.3em;
     }
 
     .hero p {
-        font-size: 9px;
         text-align: center;
-        margin-top: 1em;
-        margin-left: 1em;
-        margin-right: 1em;
+        font-family: "DM Sans", sans-serif;
+        font-size: clamp(16px, 2vw, 30px);
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    .hero span {
+        position: relative;
+    }
+
+    .hero span::before {
+        content: "Workflow";
+        font-family: "DM Sans", sans-serif;
+        font-weight: 1000;
+        color: #0075FF;
+        animation: words 20s infinite;
+    }
+
+    .hero span::after {
+        content: "";
+        position: absolute;
+        width: calc(100% + 8px);
+        height: 100%;
+        background-color: #1B1B1B;
+        border-left: 2px solid #ffffff;
+        right: -8px;
+        animation: cursor .8s infinite, typing 20s steps(14) infinite;
+    }
+
+    @keyframes cursor {
+        to {
+            border-left: 2px solid #ffffff;
+        }
+    }
+
+    @keyframes words {
+
+        0%,
+        20% {
+            content: "Operations";
+            color: #0075FF;
+            font-family: "DM Sans", sans-serif;
+            font-weight: 1000;
+        }
+
+        21%,
+        40% {
+            content: "Systems";
+            color: #0075FF;
+            font-family: "DM Sans", sans-serif;
+            font-weight: 1000;
+        }
+
+        41%,
+        60% {
+            content: "Procedure";
+            color: #0075FF;
+            font-family: "DM Sans", sans-serif;
+            font-weight: 1000;
+        }
+
+        61%,
+        80% {
+            content: "Taskflow";
+            color: #0075FF;
+            font-family: "DM Sans", sans-serif;
+            font-weight: 1000;
+        }
+    }
+
+    @keyframes typing {
+
+        10%,
+        15%,
+        30%,
+        35%,
+        50%,
+        55%,
+        70%,
+        75%,
+        90%,
+        95% {
+            width: 0;
+        }
+
+        5%,
+        20%,
+        25%,
+        40%,
+        45%,
+        60%,
+        65%,
+        80%,
+        85% {
+            width: calc(100% + 8px);
+        }
     }
 
     .video {
+        background-color: #1B1B1B;
         text-align: center;
+        margin-top: 2em;
     }
 
-    iframe {
-        width: 400px;
-        height: 280px;
-        border-radius: 10px;
-        box-shadow: 5px 5px 5px black;
+    .video iframe {
+        width: 1000px;
+        max-width: 100%;
+        height: 100%;
+        aspect-ratio: 16/9;
+        border-radius: 15px;
+        margin-bottom: 1em;
     }
 
-    .bookcall {
-        display: flex;
-        margin: auto;
-        height: 60px;
-        width: 300px;
+    /* .image img{
+        width: 500px;
+        max-width: 90%;
+        height: 100%;
+        border-radius: 15px;
+        margin-bottom: 1em;
+        aspect-ratio: 1/1;
+
+    } */
+
+
+    .learnmore-button a,
+    button {
+        display: inline-block;
+        /* Ensure the anchor behaves like a block-level element */
+        height: 50px;
+        width: 150px;
         border-radius: 10px;
         background-color: #0075FF;
-        transition: all 0.3s ease 0s;
-        color: #ffffff;
         border: none;
-        margin-top: 2em;
-        box-shadow: 5px 5px 5px black;
-    }
-
-    .video img {
-        height: 300px;
-        width: 300px;
-        margin-top: 2em;
-        margin-bottom: -4em;
-    }
-
-    .bookcall h1 {
-        font-size: 30px;
-        margin: auto;
-        font-weight: 700;
+        font-size: 20px;
+        box-shadow: inset 0 0 0 0 #54b3d6;
+        color: #000000;
+        margin: 0 -.25rem;
+        padding: 0 .25rem;
+        text-decoration: none;
+        /* Remove underline from anchor */
         text-align: center;
+        /* Center text horizontally */
+        line-height: 50px;
+        /* Center text vertically */
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
     }
 
-    .CTA-button button:hover {
-        background-color: rgb(19, 75, 179);
+    .learnmore-button button:hover {
+        box-shadow: inset 150px 0 0 0 #ffffff;
+        color: rgb(0, 0, 0);
         cursor: pointer;
     }
 
-    .image {
-        margin: auto;
+    .about {
+        background-color: #1B1B1B;
+        color: white;
         text-align: center;
+        margin-top: 2em;
+        min-width: 300px;
+    }
+
+    .image {
+        text-align: center;
+        margin-bottom: 1em;
     }
 
     .image img {
-        margin-top: 1em;
-        height: 400px;
-        width: 400px;
-    }
-
-    .about {
-        height: 100vh;
-        width: 100%;
+        width: 500px;
+        max-width: 90%;
+        height: 100%;
+        border-radius: 15px;
+        margin-bottom: 1em;
+        aspect-ratio: 1/1;
     }
 
     .box {
         margin: auto;
-        display: flex;
-        flex-direction: column;
-        margin-top: 2em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         background-color: rgb(65, 65, 65);
-        height: 800px;
-        width: 90%;
+        width: 1300px;
+        max-width: 95%;
         border-radius: 50px;
         box-shadow: 3px 3px 10px rgb(0, 89, 255);
-        text-align: center;
-    }
-
-    .box h1 {
-        font: 15px;
-        margin-top: 0.5em;
-        margin-left: 0.2em;
-        color: white;
+        padding-left: 0.7em;
+        padding-right: 0.7em;
+        margin-bottom: 2em;
     }
 
     .box p {
@@ -201,33 +312,42 @@ html {
         padding-left: 1em;
         padding-right: 1em;
         color: aliceblue;
+        margin-bottom: 1em;
     }
 
     .text h1 {
-        font-size: 25px;
+        font-size: 35px;
         font-weight: 700;
+        font-family: "DM Sans", sans-serif;
     }
 
     .text p {
-        font-size: 14px;
+        font-size: clamp(16px, 2vw, 20px);
+        font-family: "DM Sans", sans-serif;
+    }
+
+    .about_image {
+        justify-content: center;
+        align-items: center;
     }
 
     .about_image img {
         border-radius: 20px;
-        margin-top: 2em;
-        height: 339px;
-        width: 339px;
+        margin: 1em;
+        width: 400px;
     }
 
     .service {
-        height: 120vh;
-        width: 100%;
+        background-color: #1B1B1B;
+        color: white;
+        text-align: center;
+        margin-top: 2em;
+        min-width: 300px;
     }
 
     .service_title h1 {
-        font-weight: 700;
-
-        margin-top: 15em;
+        font-family: "DM Sans", sans-serif;
+        font-weight: 1000;
         text-align: center;
         color: #ffffff;
         font-size: 50px;
@@ -238,6 +358,926 @@ html {
         height: auto;
         width: 100%;
         text-align: center;
+    }
+
+    .container {
+        display: inline-block;
+        width: 500px;
+        max-width: 90%;
+        aspect-ratio: 1/1;
+        margin: 1em;
+        margin-top: 2em;
+        height: 250px;
+        max-width: 300px;
+        box-shadow: 5px 5px 5px black;
+        background: #0075FF;
+    }
+
+    .container_service h1 {
+        font-family: "DM Sans", sans-serif;
+        font-size: 25px;
+        color: white;
+    }
+
+    .container img {
+        margin: auto;
+        height: 200px;
+        width: 200px;
+        opacity: 100%;
+    }
+
+    .learnmore {
+        margin-top: 1em;
+    }
+
+    .process {
+        background-color: #1B1B1B;
+        color: white;
+        text-align: center;
+        margin-top: 2em;
+        min-width: 300px;
+    }
+
+    .process_title h1 {
+        font-family: "DM Sans", sans-serif;
+        font-size: 50px;
+        color: white;
+        font-weight: 1000;
+    }
+
+    .book_call {
+        background-color: #1B1B1B;
+        color: white;
+        text-align: center;
+        margin-top: 2em;
+        min-width: 300px;
+    }
+
+    .book_call h1 {
+        font-family: "DM Sans", sans-serif;
+        font-weight: 1000;
+        color: #ffffff;
+        font-size: 50px;
+    }
+
+    .calendly {
+        height: 100vh;
+        max-width: 100%;
+    }
+
+    .calendly-inline-widget {
+        margin: auto;
+        margin-top: 2em;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        min-width: 300px;
+    }
+
+    footer {
+        background: #424242;
+        padding-top: 50px;
+    }
+
+    h3 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: white;
+    }
+
+    .footer-content {
+        margin-top: 1em;
+    }
+
+    .footer-content p {
+        margin: auto;
+        text-align: center;
+        padding: 7px;
+        color: white;
+    }
+
+    .footer-content ul {
+        text-align: center;
+    }
+
+    .list {
+        padding: 0;
+    }
+
+    .list li {
+        width: auto;
+        text-align: center;
+        list-style-type: none;
+        padding: 7px;
+        position: relative;
+        text-decoration: none;
+        color: white;
+    }
+
+    .list li::before {
+        content: '';
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height: 2px;
+        background: #fdfdfd;
+        transition-duration: .5s;
+    }
+
+    .list li:hover::before {
+        width: 70px;
+    }
+
+    .list a:hover {
+        cursor: pointer;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover {
+        color: #0075FF;
+    }
+
+    .social-icons i:hover {
+        color: #0075FF;
+    }
+
+    .bottom-bar {
+        background: #0075FF;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 50px;
+    }
+
+    .bottom-bar p {
+        color: #ffffff;
+        margin: 0;
+        font-size: 16px;
+        padding: 7px;
+    }
+
+    .link :hover {
+        color: rgb(255, 255, 255);
+    }
+
+}
+
+@media only screen and (max-width:1200px) {
+    .header {
+        position: fixed;
+        background-color: #0075FF;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 1.3rem 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .logo {
+        font-size: 2em;
+        color: white;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    .navbar a {
+        font-size: 1.15rem;
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        margin-left: 2.5rem;
+    }
+
+    #check {
+        display: none;
+    }
+
+    .icons {
+        position: absolute;
+        right: 5%;
+        font-size: 2.8rem;
+        color: white;
+        cursor: pointer;
+        display: none;
+    }
+
+    .list a:hover {
+        cursor: pointer;
+    }
+
+    header a:hover {
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+    }
+
+    .hero {
+        margin-top: 10em;
+        min-width: 300px;
+        color: white;
+        background-color: #1B1B1B;
+    }
+
+    .hero h1 {
+        color: rgb(209, 209, 209);
+        text-align: center;
+        font-family: "DM Sans", sans-serif;
+        font-weight: 1000;
+        font-size: 7vw;
+    }
+
+    .hero p {
+        text-align: center;
+        font-size: 2vw;
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+
+    .hero span {
+        position: relative;
+    }
+
+    .hero span::before {
+        content: "Workflow";
+        font-family: "DM Sans", sans-serif;
+        font-weight: 1000;
+        color: #0075FF;
+        animation: words 20s infinite;
+    }
+
+    .hero span::after {
+        content: "";
+        position: absolute;
+        width: calc(100% + 8px);
+        height: 100%;
+        background-color: #1B1B1B;
+        border-left: 2px solid #ffffff;
+        right: -8px;
+        animation: cursor .8s infinite, typing 20s steps(14) infinite;
+    }
+
+    @keyframes cursor {
+        to {
+            border-left: 2px solid #ffffff;
+        }
+    }
+
+    @keyframes words {
+
+        0%,
+        20% {
+            content: "Operations";
+            color: #0075FF;
+        }
+
+        21%,
+        40% {
+            content: "Systems";
+            color: #0075FF;
+        }
+
+        41%,
+        60% {
+            content: "Procedure";
+            color: #0075FF;
+        }
+
+        61%,
+        80% {
+            content: "Taskflow";
+            color: #0075FF;
+        }
+    }
+
+    @keyframes typing {
+
+        10%,
+        15%,
+        30%,
+        35%,
+        50%,
+        55%,
+        70%,
+        75%,
+        90%,
+        95% {
+            width: 0;
+        }
+
+        5%,
+        20%,
+        25%,
+        40%,
+        45%,
+        60%,
+        65%,
+        80%,
+        85% {
+            width: calc(100% + 8px);
+        }
+    }
+
+    .video {
+        background-color: #1B1B1B;
+        text-align: center;
+        margin-top: 2em;
+    }
+
+    .video iframe {
+        width: 500px;
+        max-width: 90%;
+        height: 100%;
+        aspect-ratio: 16/9;
+        border-radius: 15px;
+        margin-bottom: 1em;
+    }
+
+    .learnmore-button {
+        margin-top: 1em;
+    }
+
+    .learnmore-button a,
+    button {
+        display: inline-block;
+        /* Ensure the anchor behaves like a block-level element */
+        height: 50px;
+        width: 150px;
+        border-radius: 10px;
+        background-color: #0075FF;
+        border: none;
+        font-size: 20px;
+        box-shadow: inset 0 0 0 0 #54b3d6;
+        color: #000000;
+        margin: 0 -.25rem;
+        padding: 0 .25rem;
+        text-decoration: none;
+        /* Remove underline from anchor */
+        text-align: center;
+        /* Center text horizontally */
+        line-height: 50px;
+        /* Center text vertically */
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    }
+
+    .learnmore-button button:hover {
+        box-shadow: inset 150px 0 0 0 #ffffff;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+    }
+
+    .about {
+        background-color: #1B1B1B;
+        color: white;
+        text-align: center;
+        margin-top: 2em;
+        min-width: 300px;
+    }
+
+    .image {
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .image img {
+        width: 500px;
+        max-width: 90%;
+        height: 100%;
+        border-radius: 15px;
+        margin-bottom: 1em;
+        aspect-ratio: 1/1;
+    }
+
+    .box {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(65, 65, 65);
+        max-width: 95%;
+        border-radius: 50px;
+        box-shadow: 3px 3px 10px rgb(0, 89, 255);
+        text-align: center;
+        padding-left: 0.7em;
+        padding-right: 0.7em;
+        margin-bottom: 2em;
+    }
+
+    .box h1 {
+        font-size: 5.5vw;
+        font-weight: 700;
+        font-family: "DM Sans", sans-serif;
+    }
+
+    .box p {
+        font-size: 2vw;
+        font-family: "DM Sans", sans-serif;
+    }
+
+    .text {
+        margin-bottom: 1em;
+    }
+
+    .about_image img {
+        width: 500px;
+        max-width: 90%;
+        height: 100%;
+        border-radius: 15px;
+        margin-bottom: 1em;
+        aspect-ratio: 1/1;
+    }
+
+    .service {
+        background-color: #1B1B1B;
+        color: white;
+        text-align: center;
+        margin-top: 2em;
+        min-width: 300px;
+    }
+
+    .service_title h1 {
+        font-family: "DM Sans", sans-serif;
+        font-weight: 1000;
+    }
+
+    .process_title h1 {
+        font-family: "DM Sans", sans-serif;
+        font-weight: 1000;
+    }
+
+    .container_service {
+        margin: auto;
+        height: auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .container {
+        position: sticky;
+        top: 100px;
+        /* Adjust this value as needed */
+        width: 500px;
+        max-width: 90%;
+        aspect-ratio: 1/1;
+        margin: auto;
+        margin-top: 2em;
+        height: 250px;
+        max-width: 300px;
+        box-shadow: 5px 5px 5px black;
+        background: #0075FF;
+    }
+
+    .container_service h1 {
+        font-size: 25px;
+        color: white;
+    }
+
+
+    .container img {
+        margin: auto;
+        height: 200px;
+        width: 200px;
+        opacity: 100%;
+    }
+
+    .learnmore {
+        margin-top: 1em;
+    }
+
+    .process {
+        background-color: #1B1B1B;
+        color: white;
+        text-align: center;
+        margin-top: 2em;
+        min-width: 300px;
+    }
+
+    .book_call {
+        background-color: #1B1B1B;
+        color: white;
+        text-align: center;
+        margin-top: 2em;
+        min-width: 300px;
+    }
+
+    .book_call h1 {
+        font-family: "DM Sans", sans-serif;
+        font-weight: 1000;
+    }
+
+    .calendly {
+        height: 100vh;
+        max-width: 100%;
+    }
+
+    .calendly-inline-widget {
+        margin: auto;
+        margin-top: 2em;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 95%;
+        min-width: 300px;
+    }
+
+    footer {
+        background: #424242;
+        padding-top: 50px;
+    }
+
+    h3 {
+        font-size: 28px;
+        margin-bottom: 15px;
+        text-align: center;
+        color: white;
+    }
+
+    .footer-content {
+        margin-top: 1em;
+    }
+
+    .footer-content p {
+        margin: auto;
+        text-align: center;
+        padding: 7px;
+        color: white;
+    }
+
+    .footer-content ul {
+        text-align: center;
+    }
+
+    .list {
+        padding: 0;
+    }
+
+    .list li {
+        width: auto;
+        text-align: center;
+        list-style-type: none;
+        padding: 7px;
+        position: relative;
+        text-decoration: none;
+        color: white;
+    }
+
+    .list li::before {
+        content: '';
+        position: absolute;
+        transform: translate(-50%, -50%);
+        left: 50%;
+        top: 100%;
+        width: 0;
+        height: 2px;
+        background: #fdfdfd;
+        transition-duration: .5s;
+    }
+
+    .list li:hover::before {
+        width: 70px;
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    a:hover {
+        color: #0075FF;
+    }
+
+    .social-icons i:hover {
+        color: #0075FF;
+    }
+
+    .bottom-bar {
+        background: #0075FF;
+        text-align: center;
+        padding: 10px 0;
+        margin-top: 50px;
+    }
+
+    .bottom-bar p {
+        color: #ffffff;
+        margin: 0;
+        font-size: 16px;
+        padding: 7px;
+    }
+
+    .link :hover {
+        color: rgb(255, 255, 255);
+    }
+}
+
+/*breakpoint*/
+@media only screen and (max-width:992px) {
+    .header {
+        padding: 1.3rem 5%;
+    }
+
+    .icons {
+        display: inline-flex;
+    }
+
+    #check:checked~.icons #menu-icon {
+        display: none;
+    }
+
+    .icons #close-icon {
+        display: none;
+    }
+
+    #check:checked~.icons #close-icon {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 0;
+        width: 100%;
+        background: #0075FF;
+        transition: 0.8s ease;
+    }
+
+    #check:checked~.navbar {
+        height: 12.7rem;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: 0.8s ease;
+    }
+
+    #check:checked~.navbar a {
+        transform: translateY(0);
+        opacity: 1;
+        transition-delay: calc(0.15s * var(--i));
+    }
+
+    .hero {
+        margin-top: 10em;
+        min-width: 300px;
+        color: white;
+        background-color: #1B1B1B;
+    }
+
+    .hero h1 {
+        text-align: center;
+        font-size: 7vw;
+    }
+
+    .hero p {
+        text-align: center;
+        font-size: 3.5vw;
+        margin-left: 4%;
+        margin-right: 4%;
+    }
+
+    .hero span {
+        position: relative;
+    }
+
+    .hero span::before {
+        content: "Workflow";
+        color: #0075FF;
+        animation: words 20s infinite;
+    }
+
+    .hero span::after {
+        content: "";
+        position: absolute;
+        width: calc(100% + 8px);
+        height: 100%;
+        background-color: #1B1B1B;
+        border-left: 2px solid #ffffff;
+        right: -8px;
+        animation: cursor .8s infinite, typing 20s steps(14) infinite;
+    }
+
+    @keyframes cursor {
+        to {
+            border-left: 2px solid #ffffff;
+        }
+    }
+
+    @keyframes words {
+
+        0%,
+        20% {
+            content: "Operations";
+            color: #0075FF;
+        }
+
+        21%,
+        40% {
+            content: "Systems";
+            color: #0075FF;
+        }
+
+        41%,
+        60% {
+            content: "Procedure";
+            color: #0075FF;
+        }
+
+        61%,
+        80% {
+            content: "Taskflow";
+            color: #0075FF;
+        }
+    }
+
+    @keyframes typing {
+
+        10%,
+        15%,
+        30%,
+        35%,
+        50%,
+        55%,
+        70%,
+        75%,
+        90%,
+        95% {
+            width: 0;
+        }
+
+        5%,
+        20%,
+        25%,
+        40%,
+        45%,
+        60%,
+        65%,
+        80%,
+        85% {
+            width: calc(100% + 8px);
+        }
+    }
+
+    .video {
+        background-color: #1B1B1B;
+        text-align: center;
+        margin-top: 2em;
+    }
+
+    .video iframe {
+        width: 500px;
+        max-width: 90%;
+        height: 100%;
+        aspect-ratio: 16/9;
+        border-radius: 15px;
+        margin-bottom: 1em;
+    }
+
+    /* .image img{
+        width: 500px;
+        max-width: 90%;
+        height: 100%;
+        border-radius: 15px;
+        margin-bottom: 1em;
+        aspect-ratio: 1/1;
+
+    } */
+
+
+    .learnmore-button a,
+    button {
+        display: inline-block;
+        /* Ensure the anchor behaves like a block-level element */
+        height: 50px;
+        width: 150px;
+        border-radius: 10px;
+        background-color: #0075FF;
+        border: none;
+        font-size: 20px;
+        box-shadow: inset 0 0 0 0 #54b3d6;
+        color: #000000;
+        margin: 0 -.25rem;
+        padding: 0 .25rem;
+        text-decoration: none;
+        text-align: center;
+        line-height: 50px;
+        transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
+    }
+
+    .learnmore-button button:hover {
+        box-shadow: inset 150px 0 0 0 #ffffff;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+    }
+
+    .about {
+        background-color: #1B1B1B;
+        color: white;
+        text-align: center;
+        margin-top: 2em;
+        min-width: 300px;
+    }
+
+    .image {
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .image img {
+        width: 500px;
+        max-width: 90%;
+        height: 100%;
+        border-radius: 15px;
+        margin-bottom: 1em;
+        aspect-ratio: 1/1;
+    }
+
+    .box {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(65, 65, 65);
+        max-width: 95%;
+        border-radius: 50px;
+        box-shadow: 3px 3px 10px rgb(0, 89, 255);
+        text-align: center;
+        padding-left: 0.7em;
+        padding-right: 0.7em;
+        margin-bottom: 2em;
+    }
+
+    .box h1 {
+        font-size: 6.5vw;
+    }
+
+    .box p {
+        font-size: 3.5vw;
+    }
+
+    .text {
+        margin-bottom: 1em;
+    }
+
+    .about_image img {
+        width: 500px;
+        max-width: 90%;
+        height: 100%;
+        border-radius: 15px;
+        margin-bottom: 1em;
+        aspect-ratio: 1/1;
+    }
+
+    .service {
+        background-color: #1B1B1B;
+        color: white;
+        text-align: center;
+        margin-top: 2em;
+        min-width: 300px;
+    }
+
+    .container_service {
+        margin: auto;
+        height: auto;
+        width: 100%;
+        text-align: center;
+    }
+
+    .container {
+        position: sticky;
+        top: 100px;
+        /* Adjust this value as needed */
+        width: 500px;
+        max-width: 90%;
+        aspect-ratio: 1/1;
+        margin: auto;
+        margin-top: 2em;
+        height: 250px;
+        max-width: 300px;
+        box-shadow: 5px 5px 5px black;
+        background: #0075FF;
     }
 
     .container_service h1 {
@@ -252,1026 +1292,46 @@ html {
         opacity: 100%;
     }
 
-    .container {
-        margin: auto;
-        margin-top: 2em;
-        display: inline-block;
-        height: 250px;
-        width: 300px;
-        box-shadow: 5px 5px 5px black;
-        background: linear-gradient(to top right, #001AFF, #4476da);
-    }
-
-    .container h1 {
-        font-weight: 900;
-        margin-bottom: 0.5em;
-    }
-
     .learnmore {
-        margin: auto;
-        text-align: center;
         margin-top: 1em;
     }
 
-    .learnmore button {
-        height: 50px;
-        width: 300px;
-        border-radius: 50px;
-        border: 2px solid #0075FF;
-        background-color: #1B1B1B;
-        font-size: 30px;
-        color: #0075FF;
-        transition: all 0.8s ease 0s;
-    }
-
-    .learnmore button:hover {
-        cursor: pointer;
-        color: #ffffff;
-        background-color: #0075FF;
-    }
-
     .process {
-        height: 100vh;
-        width: 100%;
-    }
-
-    .process_title h1 {
-        margin-top: -2.5em;
+        background-color: #1B1B1B;
+        color: white;
         text-align: center;
-        color: #ffffff;
-        font-size: 50px;
-    }
-
-    .container:hover {
-        background: linear-gradient(to top right, #3145fa, #4a7ada);
+        margin-top: 2em;
+        min-width: 300px;
     }
 
     .book_call {
-        color: #ffffff;
+        background-color: #1B1B1B;
+        color: white;
         text-align: center;
-        font-size: 30px;
-        margin-top: 7em;
-        margin-bottom: -3em;
-
-    }
-
-    .book_call h1 {
-        font-size: 35px;
-        margin-top: 25em;
-        padding-right: 10px;
-        padding-left: 10px;
-        font-weight: 700;
+        margin-top: 2em;
+        min-width: 300px;
     }
 
     .calendly {
-        height: 100vh;
-        width: 100%;
+        height: 50vh;
+        max-width: 100%;
+        margin-bottom: 2em;
     }
 
     .calendly-inline-widget {
         margin: auto;
-        height: 900px;
-        width: 100%;
-        max-width: 100vh;
-        align-items: center;
-        align-self: center;
-        margin-left: 1.0em;
-        margin-top: 9em;
-    }
-
-    footer {
-        margin-top: -35em;
-        background: #424242;
-        padding-top: 50px;
-    }
-
-    h3 {
-        font-size: 28px;
-        margin-bottom: 15px;
-        text-align: center;
-        color: white;
-    }
-
-    .footer-content {
-        margin-top: 1em;
-    }
-
-    .footer-content p {
-        margin: auto;
-        text-align: center;
-        padding: 7px;
-        color: white;
-    }
-
-    .footer-content ul {
-        text-align: center;
-    }
-
-    .list {
-        padding: 0;
-    }
-
-    .list li {
-        width: auto;
-        text-align: center;
-        list-style-type: none;
-        padding: 7px;
-        position: relative;
-        text-decoration: none;
-        color: white;
-    }
-
-    .list li::before {
-        content: '';
-        position: absolute;
-        transform: translate(-50%, -50%);
-        left: 50%;
-        top: 100%;
-        width: 0;
-        height: 2px;
-        background: #fdfdfd;
-        transition-duration: .5s;
-    }
-
-    .list li:hover::before {
-        width: 70px;
-    }
-
-    a {
-        text-decoration: none;
-        color: white;
-    }
-
-    a:hover {
-        color: rgb(64, 131, 255);
-    }
-
-    .social-icons i:hover {
-        color: rgb(64, 131, 255);
-    }
-
-    .bottom-bar {
-        background: rgb(0, 89, 255);
-        text-align: center;
-        padding: 10px 0;
-        margin-top: 50px;
-    }
-
-    .bottom-bar p {
-        color: #ffffff;
-        margin: 0;
-        font-size: 16px;
-        padding: 7px;
-    }
-
-    .link :hover {
-        color: rgb(255, 255, 255);
-    }
-
-    .title-learnmore h1 {
-        text-align: center;
-        margin-top: 0.5em;
-        color: #ffffff;
-        font-size: 50px;
-        margin-bottom: -1em;
-    }
-
-
-
-
-    .box {
-        margin: auto;
-        display: flex;
-        flex-direction: column;
         margin-top: 2em;
-        background-color: rgb(65, 65, 65);
-        height: 800px;
-        width: 90%;
-        border-radius: 50px;
-        box-shadow: 3px 3px 10px rgb(0, 89, 255);
-        text-align: center;
-    }
-
-    .box-learnmore h1 {
-        font: 15px;
-        margin-top: 0.5em;
-        margin-left: 0.2em;
-        color: white;
-    }
-
-    .box-learnmore {
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        margin-top: 3.5em;
-        background-color: rgb(65, 65, 65);
-        height: 800px;
-        width: 90%;
-        border-radius: 50px;
-        box-shadow: 3px 3px 10px rgb(0, 89, 255);
-        text-align: center;
-    }
-
-    .text h1 {
-        font-size: 30px;
-    }
-
-    .text p {
-        font-size: 15px;
-    }
-
-    .learnmore_image img {
-        border-radius: 20px;
-        margin-top: 2em;
-        margin-right: 2em;
-        margin-left: 2em;
-        height: 339px;
-        width: 339px;
-    }
-
-    .book-call-learnmore {
-        height: 100vh;
-        width: 100%;
-        margin-bottom: 4em;
-    }
-
-
-
-    .book-call-title h1 {
-        margin-top: 2em;
-        margin-bottom: -4.5em;
-        color: white;
-        text-align: center;
-        font-size: 30px;
-    }
-
-}
-
-/*The screen is for laptop screen*/
-@media only screen and (min-width: 900px) and (max-width: 1280px) {
-    .nav_bar {
-        height: 15vh;
-        width: 100%;
-        background-color: #0075FF;
-        box-shadow: 5px 5px 4px rgb(0, 0, 0);
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-    }
-
-    li,
-    a {
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 100;
-        font-size: 16px;
-        color: #edf0f1;
-        text-decoration: none;
-    }
-
-    header {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 30px 4%;
-    }
-
-    .logo {
-        margin-right: auto;
-        cursor: pointer;
-        height: 120px;
-        width: 170px;
-        margin-top: -1.4em;
-        cursor: pointer;
-        clip-path: polygon(0 20%, 100% 20%, 100% 60%, 0 60%);
-    }
-
-    .nav_links {
-        list-style: none;
-        padding-bottom: 4em;
-    }
-
-    .nav_links li {
-        display: inline-block;
-        padding: 0px 20px;
-    }
-
-    .nav_links li a {
-        transition: all 0.3s ease 0s;
-    }
-
-    .nav_links li a:hover {
-        color: rgb(0, 0, 0);
-    }
-
-    .hero {
-        height: 75vh;
-        width: 100%;
-        color: white;
-        font-family: "Montserrat", sans-serif;
-    }
-
-    .hero h1 {
-        font-size: 50px;
-        text-align: center;
-        padding-top: 2em;
-        font-weight: 900;
-        margin-left: 3em;
-        margin-right: 3em;
-        text-shadow: 3px 3px 3px rgb(40, 40, 41);
-    }
-
-    .hero p {
-        font-size: 22px;
-        text-align: center;
-        margin-top: 1em;
-        margin-left: 7em;
-        margin-right: 7em;
-    }
-
-    .video {
-        text-align: center;
-        margin-top: -7em;
-    }
-
-    iframe {
-        width: 900px;
-        height: 480px;
-        border-radius: 10px;
-        box-shadow: 5px 5px 5px black;
-    }
-
-    .bookcall {
-        display: flex;
-        margin: auto;
-        height: 60px;
-        width: 900px;
-        border-radius: 10px;
-        background-color: #0075FF;
-        transition: all 0.3s ease 0s;
-        color: #ffffff;
-        border: none;
-        margin-top: 2em;
-        box-shadow: 5px 5px 5px black;
-    }
-
-    .video img {
-        margin-top: 2em;
-        margin-bottom: -4em;
-    }
-
-    .bookcall h1 {
-        font-size: 30px;
-        margin: auto;
-        font-weight: 700;
-        text-align: center;
-    }
-
-    .CTA-button button:hover {
-        background-color: rgb(19, 75, 179);
-        cursor: pointer;
-    }
-
-    .image {
-        margin: auto;
-        text-align: center;
-    }
-
-    .image img {
-        margin-top: 2em;
-    }
-
-    .about {
-        height: 100vh;
-        width: 100%;
-    }
-
-    .box {
-        margin: auto;
-        display: flex;
-        margin-top: 2em;
-        background-color: rgb(65, 65, 65);
-        height: 400px;
-        width: 1162px;
-        border-radius: 50px;
-        box-shadow: 3px 3px 10px rgb(0, 89, 255);
-        text-align: center;
-    }
-
-    .box h1 {
-        font: 30px;
-        margin-top: 0.5em;
-        margin-left: 0.2em;
-        color: white;
-    }
-
-    .box p {
-        font: 12px;
-        padding-top: 0.5em;
-        padding-left: 0.5em;
-        color: #ffffff;
-    }
-
-    .text {
-        text-align: left;
-        font-size: 18px;
-        padding-top: 1em;
-        padding-left: 1em;
-        padding-right: 1em;
-        color: aliceblue;
-    }
-
-    .text h1 {
-        font-weight: 700;
-    }
-
-    .text p {
-        font-size: 20px;
-    }
-
-    .about_image img {
-        border-radius: 20px;
-        margin-top: 2em;
-        margin-right: 2em;
-        height: 339px;
-        width: 339px;
-    }
-
-    .service {
-        height: 120vh;
-        width: 100%;
-    }
-
-    .service_title h1 {
-        padding-top: 6em;
-        text-align: center;
-        color: #ffffff;
-        font-size: 50px;
-    }
-
-    .container_service {
-        margin: auto;
-        height: auto;
-        width: 100%;
-        text-align: center;
-    }
-
-    .container_service h1 {
-        font-size: 25px;
-        color: white;
-    }
-
-    .container img {
-        height: 200px;
-        width: 200px;
-        opacity: 80%;
-    }
-
-    .container {
-        display: inline-block;
-        height: 250px;
-        width: 300px;
-        box-shadow: 5px 5px 5px black;
-        background: linear-gradient(to top right, #001AFF, #4476da);
-        margin: 1em;
-    }
-
-    .container h1 {
-        font-weight: 900;
-    }
-
-    .learnmore {
-        margin: auto;
-        text-align: center;
-        margin-top: 1em;
-    }
-
-    .learnmore button {
-        height: 50px;
-        width: 300px;
-        border-radius: 50px;
-        border: 2px solid #0075FF;
-        background-color: #1B1B1B;
-        font-size: 30px;
-        color: #0075FF;
-        transition: all 0.8s ease 0s;
-    }
-
-    .learnmore button:hover {
-        cursor: pointer;
-        color: #ffffff;
-        background-color: #0075FF;
-    }
-
-    .process {
-        height: 100vh;
-        width: 100%;
-    }
-
-    .process_title h1 {
-        padding-top: 1em;
-        text-align: center;
-        color: #ffffff;
-        font-size: 50px;
-    }
-
-    .container:hover {
-        background: linear-gradient(to top right, #3145fa, #4a7ada);
-    }
-
-    .book_call {
-        color: #ffffff;
-        text-align: center;
-        font-size: 30px;
-        margin-top: 7em;
-        margin-bottom: -3em;
-    }
-
-    .book_call h1 {
-        font-weight: 700;
-    }
-
-    .calendly {
-        height: 100vh;
-        width: 100%;
-    }
-
-    .calendly-inline-widget {
-        margin: auto;
-        height: 700px;
-        width: 100%;
-        max-width: 100vh;
+        height: 100%;
         display: flex;
         align-items: center;
-    }
-
-    footer {
-        background: #424242;
-        padding-top: 50px;
-        margin-top: 4em;
-    }
-
-    .container_footer {
-        width: 1140px;
-        margin: auto;
-        display: flex;
         justify-content: center;
-    }
-
-    .footer-content {
-        width: 33%;
-    }
-
-    h3 {
-        font-size: 28px;
-        margin-bottom: 15px;
-        text-align: center;
-        color: white;
-    }
-
-    .footer-content p {
-        width: 190px;
-        text-align: center;
-        margin: auto;
-        padding: 7px;
-        color: white;
-    }
-
-    .footer-content ul {
-        text-align: left;
-    }
-
-    .list {
-        padding: 0;
-    }
-
-    .list li {
-        width: auto;
-        text-align: center;
-        list-style-type: none;
-        padding: 7px;
-        position: relative;
-        text-decoration: none;
-        color: white;
-    }
-
-    .list li::before {
-        content: '';
-        position: absolute;
-        transform: translate(-50%, -50%);
-        left: 50%;
-        top: 100%;
-        width: 0;
-        height: 2px;
-        background: #fdfdfd;
-        transition-duration: .5s;
-    }
-
-    .list li:hover::before {
-        width: 70px;
-    }
-
-    .social-icons {
-        text-align: center;
-        padding: 0;
-    }
-
-    .social-icons li {
-        display: inline-block;
-        text-align: center;
-        padding: 5px;
-    }
-
-    .social-icons i {
-        color: white;
-        font-size: 25px;
-    }
-
-    a {
-        text-decoration: none;
-        color: white;
-    }
-
-    a:hover {
-        color: rgb(64, 131, 255);
-    }
-
-    .social-icons i:hover {
-        color: rgb(64, 131, 255);
-    }
-
-    .bottom-bar {
-        background: rgb(0, 89, 255);
-        text-align: center;
-        padding: 10px 0;
-        margin-top: 50px;
-    }
-
-    .bottom-bar p {
-        color: #ffffff;
-        margin: 0;
-        font-size: 16px;
-        padding: 7px;
-    }
-
-    .link :hover {
-        color: rgb(255, 255, 255);
-    }
-
-    .title-learnmore h1 {
-        text-align: center;
-        margin-top: 0.5em;
-        color: #ffffff;
-        font-weight: 700;
-        font-size: 50px;
-        margin-bottom: -1em;
-    }
-
-    .box-learnmore {
-        margin: auto;
-        display: flex;
-        margin-top: 4em;
-        background-color: rgb(65, 65, 65);
-        height: 400px;
-        width: 1162px;
-        border-radius: 50px;
-        box-shadow: 3px 3px 10px rgb(0, 89, 255);
-        text-align: center;
-    }
-
-    .learnmore_image img {
-        border-radius: 20px;
-        margin-top: 2em;
-        margin-right: 2em;
-        margin-left: 2em;
-        height: 339px;
-        width: 339px;
-    }
-
-    .book-call-learnmore {
-        height: 100vh;
-        width: 100%;
-    }
-
-    .book-call-title {
-        margin-top: 2em;
-        margin-bottom: -3em;
-        color: white;
-        text-align: center;
-        font-size: 30px;
-    }
-}
-
-/*The screen is for desktop screen*/
-@media only screen and (min-width: 1281px) {
-
-    .nav_bar {
-        height: 10vh;
-        width: 100%;
-        background-color: #0075FF;
-        box-shadow: 5px 5px 4px rgb(0, 0, 0);
-        border-bottom-left-radius: 20px;
-        border-bottom-right-radius: 20px;
-    }
-
-    li,
-    a {
-        font-family: Arial, Helvetica, sans-serif;
-        font-weight: 100;
-        font-size: 16px;
-        color: #edf0f1;
-        text-decoration: none;
-    }
-
-    header {
-        display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        padding: 30px 4%;
-    }
-
-    .logo {
-        margin-right: auto;
-        cursor: pointer;
-        height: 120px;
-        width: 170px;
-        margin-top: -1.4em;
-        cursor: pointer;
-        clip-path: polygon(0 20%, 100% 20%, 100% 60%, 0 60%);
-    }
-
-    .nav_links {
-        list-style: none;
-        padding-bottom: 4em;
-    }
-
-    .nav_links li {
-        display: inline-block;
-        padding: 0px 20px;
-    }
-
-    .nav_links li a {
-        transition: all 0.3s ease 0s;
-    }
-
-    .nav_links li a:hover {
-        color: rgb(0, 0, 0);
-    }
-
-    .hero {
-        height: 75vh;
-        width: 100%;
-        color: white;
-        font-family: "Montserrat", sans-serif;
-    }
-
-    .hero h1 {
-        font-size: 50px;
-        text-align: center;
-        padding-top: 2em;
-        font-weight: 900;
-        margin-left: 9em;
-        margin-right: 9em;
-        text-shadow: 3px 3px 3px rgb(40, 40, 41);
-    }
-
-    .hero p {
-        font-size: 22px;
-        text-align: center;
-        margin-top: 1em;
-        margin-left: 15em;
-        margin-right: 15em;
-    }
-
-    .video {
-        text-align: center;
-        margin-top: -23em;
-    }
-
-    iframe {
-        width: 900px;
-        height: 480px;
-        border-radius: 10px;
-        box-shadow: 5px 5px 5px black;
-    }
-
-    .bookcall {
-        display: flex;
-        margin: auto;
-        height: 60px;
-        width: 900px;
-        border-radius: 10px;
-        background-color: #0075FF;
-        transition: all 0.3s ease 0s;
-        color: #ffffff;
-        border: none;
-        margin-top: 2em;
-        box-shadow: 5px 5px 5px black;
-    }
-
-    .video img {
-        margin-top: 2em;
-        margin-bottom: -4em;
-    }
-
-    .bookcall h1 {
-        font-size: 30px;
-        margin: auto;
-        font-weight: 700;
-        text-align: center;
-    }
-
-    .CTA-button button:hover {
-        background-color: rgb(19, 75, 179);
-        cursor: pointer;
-    }
-
-    .image {
-        margin: auto;
-        margin-top: 2em;
-        text-align: center;
-    }
-
-    .about {
-        height: 100vh;
-        width: 100%;
-    }
-
-    .box {
-        margin: auto;
-        display: flex;
-        margin-top: 2em;
-        background-color: rgb(65, 65, 65);
-        height: 400px;
-        width: 1162px;
-        border-radius: 50px;
-        box-shadow: 3px 3px 10px rgb(0, 89, 255);
-        text-align: center;
-    }
-
-    .box h1 {
-        font: 30px;
-        margin-top: 0.5em;
-        margin-left: 0.2em;
-        color: white;
-    }
-
-    .box p {
-        font: 12px;
-        padding-top: 0.5em;
-        padding-left: 0.5em;
-        color: #ffffff;
-    }
-
-    .text {
-        text-align: left;
-        font-size: 18px;
-        padding-top: 1em;
-        padding-left: 1em;
-        padding-right: 1em;
-        color: aliceblue;
-    }
-
-    .text h1 {
-        font-weight: 700;
-    }
-
-    .text p {
-        font-size: 20px;
-    }
-
-    .about_image img {
-        border-radius: 20px;
-        margin-top: 2em;
-        margin-right: 2em;
-        height: 339px;
-        width: 339px;
-    }
-
-    .service {
-        height: 120vh;
-        width: 100%;
-        margin-top: -23em;
-    }
-
-    .service_title h1 {
-        padding-top: 6em;
-        text-align: center;
-        color: #ffffff;
-        font-size: 50px;
-    }
-
-    .container_service {
-        margin: auto;
-        height: auto;
-        width: 100%;
-        text-align: center;
-    }
-
-    .container_service h1 {
-        font-size: 25px;
-        color: white;
-    }
-
-    .container img {
-        height: 200px;
-        width: 200px;
-        opacity: 80%;
-    }
-
-    .container {
-        display: inline-block;
-        height: 250px;
-        width: 300px;
-        box-shadow: 5px 5px 5px black;
-        background: linear-gradient(to top right, #001AFF, #4476da);
-        margin: 1em;
-    }
-
-    .container h1 {
-        font-weight: 900;
-    }
-
-    .learnmore {
-        margin: auto;
-        text-align: center;
-        margin-top: 1em;
-    }
-
-    .learnmore button {
-        height: 50px;
-        width: 300px;
-        border-radius: 50px;
-        border: 2px solid #0075FF;
-        background-color: #1B1B1B;
-        font-size: 30px;
-        color: #0075FF;
-        transition: all 0.8s ease 0s;
-    }
-
-    .learnmore button:hover {
-        cursor: pointer;
-        color: #ffffff;
-        background-color: #0075FF;
-    }
-
-    .process {
-        height: 100vh;
-        width: 100%;
-        margin-top: -27em;
-        margin-bottom: -27em;
-    }
-
-    .process_title h1 {
-        padding-top: 1em;
-        text-align: center;
-        color: #ffffff;
-        font-size: 50px;
-    }
-
-    .container:hover {
-        background: linear-gradient(to top right, #3145fa, #4a7ada);
-    }
-
-    .book_call {
-        color: #ffffff;
-        text-align: center;
-        font-size: 30px;
-        margin-top: 7em;
-        margin-bottom: -3em;
-    }
-
-    .book_call h1 {
-        font-weight: 700;
-    }
-
-    .calendly {
-        height: 100vh;
-        width: 100%;
-    }
-
-    .calendly-inline-widget {
-        margin: auto;
-        height: 700px;
-        width: 100%;
-        max-width: 100vh;
-        display: flex;
-        align-items: center;
+        width: 95%;
+        min-width: 300px;
     }
 
     footer {
         background: #424242;
         padding-top: 50px;
-        margin-top: -15em;
-    }
-
-    .container_footer {
-        width: 1140px;
-        margin: auto;
-        display: flex;
-        justify-content: center;
-    }
-
-    .footer-content {
-        width: 33%;
     }
 
     h3 {
@@ -1281,16 +1341,19 @@ html {
         color: white;
     }
 
+    .footer-content {
+        margin-top: 1em;
+    }
+
     .footer-content p {
-        width: 190px;
-        text-align: center;
         margin: auto;
+        text-align: center;
         padding: 7px;
         color: white;
     }
 
     .footer-content ul {
-        text-align: left;
+        text-align: center;
     }
 
     .list {
@@ -1323,37 +1386,21 @@ html {
         width: 70px;
     }
 
-    .social-icons {
-        text-align: center;
-        padding: 0;
-    }
-
-    .social-icons li {
-        display: inline-block;
-        text-align: center;
-        padding: 5px;
-    }
-
-    .social-icons i {
-        color: white;
-        font-size: 25px;
-    }
-
     a {
         text-decoration: none;
         color: white;
     }
 
     a:hover {
-        color: rgb(64, 131, 255);
+        color: #0075FF;
     }
 
     .social-icons i:hover {
-        color: rgb(64, 131, 255);
+        color: #0075FF;
     }
 
     .bottom-bar {
-        background: rgb(0, 89, 255);
+        background: #0075FF;
         text-align: center;
         padding: 10px 0;
         margin-top: 50px;
@@ -1370,46 +1417,4 @@ html {
         color: rgb(255, 255, 255);
     }
 
-    .title-learnmore h1 {
-        text-align: center;
-        margin-top: 0.5em;
-        color: #ffffff;
-        font-size: 50px;
-        font-weight: 700;
-        margin-bottom: -1em;
-    }
-
-    .box-learnmore {
-        margin: auto;
-        display: flex;
-        margin-top: 4em;
-        background-color: rgb(65, 65, 65);
-        height: 400px;
-        width: 1162px;
-        border-radius: 50px;
-        box-shadow: 3px 3px 10px rgb(0, 89, 255);
-        text-align: center;
-    }
-
-    .learnmore_image img {
-        border-radius: 20px;
-        margin-top: 2em;
-        margin-right: 2em;
-        margin-left: 2em;
-        height: 339px;
-        width: 339px;
-    }
-
-    .book-call-learnmore {
-        height: 100vh;
-        width: 100%;
-    }
-
-    .book-call-title {
-        margin-top: 2em;
-        margin-bottom: -3em;
-        color: white;
-        text-align: center;
-        font-size: 30px;
-    }
 }
