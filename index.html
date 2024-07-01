@@ -4,62 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FlowTech</title>
+    <title>HFlow</title>
 </head>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
     href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,900;1,900&display=swap"
     rel="stylesheet">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+    rel="stylesheet">
+
+<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 <link rel="stylesheet" href="style.css">
 
 <body>
-    <div id="home" class="nav_bar">
-        <header>
-            <a class="logo" href=""><img class="logo" src="img/logo.png" alt=""></a>
-            <nav>
-                <ul class="nav_links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#service">Service</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
 
-        </header>
-    </div>
+
+    <header class="header" id="home">
+        <a href="" style="font-size: 30px;">HFlow</a>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+
+        <nav class="navbar">
+            <a href="#home" style="--i:0;">Home</a>
+            <a href="#about" style="--i:1;">About</a>
+            <a href="#service" style="--i:2;">Service</a>
+            <a href="#contact" style="--i:3;">Contact</a>
+        </nav>
+    </header>
+
 
     <div class="hero">
-        <h1>Shift Your Focus To Scaling Your Business Not Your Workload</h1>
-        <p>Transform your business with our Automated Workflow, which we implement into your business. So that you can
-            accomplish more in less time, so you can focus on growing your business.</p>
+        <h1>Scale your business with our <br>Automated <span></span></h1>
+        <p>Transform your business with our Automated Workflow, which we implement into your business. <br>So that you
+            can
+            accomplish more in less time, so you can focus on scaling your business.</p>
+
+
+        <div class="video">
+            <iframe src="https://www.youtube.com/embed/erqRw3E-vn4?si=DB7Ppp40UnepgJ0p" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <div class="learnmore-button">
+                <a class="learn-but" href=""><button>Learn More &rarr;</button></a>
+            </div>
+        </div>
     </div>
 
-    <div class="video">
-
-        <iframe class="youtube_CTA" src="https://www.youtube.om/embed/EKHJqqO1oIE?si=tp1vfOvDnbXONw7X"
-            title="YouTube video player" frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <div class="CTA-button">
-            <a href="#contact"><button class="bookcall">
-                    <h1>BOOK A CALL</h1>
-                </button></a>
+    <div class="about">
+        <div class="image">
+            <img src="img/11.png" draggable="false" alt="">
         </div>
 
-    </div>
-
-    <div class="image">
-        <img src="img/image_diagram.png" alt="">
-    </div>
-
-    <div id="about" class="about">
-        <div class="box">
+        <div class="box" id="about">
             <div class="text">
                 <h1>Who we are</h1>
                 <br>
-                <p>At Flow Tech, we work closely with your business to analyze your specific needs and challenges. We
+                <p>At HFlow, we work closely with your business to analyze your specific needs and challenges. We
                     then provide tailored software solutions and seamless automation processes that are designed to
                     optimize efficiency and minimize the need for manual intervention. Our goal is to empower your
                     business to operate smoothly and effortlessly, allowing you to focus on strategic initiatives rather
@@ -69,11 +80,12 @@
                 <p>If you’re a business like us, you understand just how important time and money is. Running a business
                     comes with a ton of small and large tasks that utilize many different software solutions. This is
                     where we come in - we offer automation for tasks such as appointment setting or even onboarding new
-                    clients/employees automation.</p>
+                    clients/emplosyees automation.
+                </p>
             </div>
 
             <div class="about_image">
-                <img src="img/smallerlogo.png" alt="">
+                <img src="img/11.png" draggable="false" alt="">
             </div>
 
         </div>
@@ -82,88 +94,86 @@
             <div class="text">
                 <h1>Meet the founder</h1>
                 <br>
-                <p>Hi there! I am Himanshu Seervi the founder of Flow Tech. Little bit about me I am University student
-                    studying software engineering at Guelph Univerisity. I love to play and watch sports, specially
-                    soccer, big barcelona fan right.
+                <p>Hi there! I am Himanshu Seervi, the founder of HFlow. A little bit about me: I'm a university student
+                    studying software engineering at Guelph University. I love to play and watch sports, especially
+                    soccer; Big Fc Barcelona fan, right here.
                 </p>
                 <br>
-                <p>Anyways, I got the idea to start Flow Tech when I was running my own marketing marketing agency in
-                    high school and I had no time to work on my business to grow. I didn't have the budget to hire
-                    someone to do some of the tasks for me. So I started to automated small tasks like sending cold
-                    emails and even a Ig dm bot that will reply to my any messages I get. </p>
+                <p>Anyways, I got the idea to start HFlow when I was running my own marketing agency in high school and
+                    didn't have time to work on growing my business. I didn't have the budget to hire someone to do some
+                    of the tasks for me. So, I started to automate small tasks like sending cold emails and even an IG
+                    DM bot that would reply to any messages I received.</p>
             </div>
 
             <div class="about_image">
-                <img src="img/Headshot.JPG" alt="">
+                <img src="img/11.png" draggable="false" alt="">
             </div>
 
         </div>
     </div>
 
-    <div class="service">
+    <div class="service" id="service">
         <div class="service_title">
-            <h1><u>Our Service</u></h1>
+            <h1>Our Service</h1>
         </div>
         <div id="service" class="container_service">
             <div class="container">
                 <h1>Custom Chatbots</h1>
-                <img src="img/chatbot.png" alt="">
+                <img src="img/11.png" draggable="false" alt="">
             </div>
             <div class="container">
                 <h1>Custom Automations</h1>
-                <img src="img/automation.png" alt="">
+                <img src="img/11.png" draggable="false" alt="">
             </div>
             <div class="container">
                 <h1>Business Consultation</h1>
-                <img src="img/business.png" alt="">
+                <img src="img/11.png" draggable="false" alt="">
             </div>
         </div>
 
-        <div class="learnmore">
-            <a href="learnmore.html"><button>Learn More</button></a>
+        <div class="learnmore-button">
+            <a href="learnmore.html"><button>Learn More &rarr;</button></a>
         </div>
-
     </div>
-
 
     <div class="process">
         <div class="process_title">
-            <h1><u>Our Process</u></h1>
+            <h1>Our Process</h1>
         </div>
         <div class="container_service">
             <div class="box_1">
                 <div class="container">
                     <h1>1. Discovery Call</h1>
-                    <img src="img/1.png" alt="">
+                    <img src="img/11.png" draggable="false" alt="">
                 </div>
                 <div class="container">
                     <h1>2. Choose Your Service</h1>
-                    <img src="img/2.png" alt="">
+                    <img src="img/11.png" draggable="false" alt="">
                 </div>
                 <div class="container">
                     <h1>3. Business Research</h1>
-                    <img src="img/3.png" alt="">
+                    <img src="img/11.png" draggable="false" alt="">
                 </div>
             </div>
             <div class="box_2">
                 <div class="container">
                     <h1>4. Prototype</h1>
-                    <img src="img/4.png" alt="">
+                    <img src="img/11.png" draggable="false" alt="">
                 </div>
                 <div class="container">
                     <h1>5. Development</h1>
-                    <img src="img/5.png" alt="">
+                    <img src="img/11.png" draggable="false" alt="">
                 </div>
                 <div class="container">
                     <h1>6. Maintenance</h1>
-                    <img src="img/6.png" alt="">
+                    <img src="img/11.png" draggable="false" alt="">
                 </div>
             </div>
         </div>
 
     </div>
 
-    <div class="book_call">
+    <div class="book_call" id="contact">
         <h1>Book a free 30-min call, Coffee's on me!</h1>
     </div>
 
@@ -179,9 +189,9 @@
         <div class="container_footer">
             <div class="footer-content">
                 <h3>Contact Us</h3>
-                <p>Email<br>himseervi@gmail.com</p>
-                <p>Phone<br>705-975-3686 <br><i>(Canada Only)</i></p>
-                <p>Address<br>Sault Ste Marie, Ontario</p>
+                <p>Email<br>himanshu@hflow.ca</p>
+                <p>Phone<br>+1 705-975-3686 <br></p>
+                <p>Address<br>Sault Ste. Marie, Ontario</p>
             </div>
             <div class="footer-content">
                 <h3>Quick Links</h3>
@@ -194,9 +204,10 @@
             </div>
         </div>
         <div class="bottom-bar">
-            <p>&copy; 2024 FlowTech. All rights reserved</p>
+            <p>&copy; 2024 HFlow. All rights reserved</p>
         </div>
     </footer>
+
 </body>
 
 </html>
